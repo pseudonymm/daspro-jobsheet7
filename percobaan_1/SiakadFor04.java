@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class SiakadFor04 {
     public static void main(String[] args) {
         double nilai, tertinggi = 0, terendah = 100;
+        int jumlahLulus = 0, jumlahTidakLulus = 0;
         Scanner sc = new Scanner(System.in);
 
         for (int i = 1; i <= 10; i++) {
@@ -16,9 +17,17 @@ public class SiakadFor04 {
             if (nilai < terendah) {
                 terendah = nilai;
             }
+
+            if (nilai >= 60) {
+                jumlahLulus++;
+            } else {
+                jumlahTidakLulus++;
+            }
         }
 
         System.out.println("Nilai tertinggi: " + tertinggi);
         System.out.println("Nilai terendah: " + terendah);
+        System.out.println("Jumlah mahasiswa yang lulus: " + jumlahLulus);
+        System.out.println("Jumlah mahasiswa yang tidak lulus: " + jumlahTidakLulus);
     }
 }
